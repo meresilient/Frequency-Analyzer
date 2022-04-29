@@ -32,8 +32,10 @@ else:
     print("Unrecognized first argument: "+ sys.argv[1])
     print("Please use '-s', '-f', '-sf/-fs' or '-h'.")
 
-if(len(sys.argv)<2):
-    sys.argv[2]=input("Please enter file name")
+if(len(sys.argv)<3):
+    lmao=input("Please enter file name:-")
+    with open(lmao) as f:
+        para = f.read()
 else:
     with open(sys.argv[2]) as f:
         para = f.read()
